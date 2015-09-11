@@ -41,6 +41,7 @@ public class Queue<k> {
 		else{
 			Node<k> top = _head;
 			_head = _head.getNext();
+			_length--;
 			return top;
 			
 		}
