@@ -1,30 +1,30 @@
 package dataStructures;
 
 /**
- * Queue
+ * Stack
  * 
  * @author fabian
  *
- * @param <k> Object Type that will be used in the Queue
+ * @param <k> Object Type that will be used in the Stack
  */
-public class Queue<k> {
+public class Stack<k> {
 	protected Node<k> _head;
 	protected Node<k> _tail;
 	protected int _length;
 	
 	
-	public Queue(){
+	public Stack(){
 		_head = null;
 		_tail = null;
 		_length = 0;
 	}
 	
 	/**
-	 * <p> enQueue() <p>
-	 * Inserts the specified element into the queue
+	 * <p> push() <p>
+	 * Inserts the specified element into the stack
 	 * @param pData: new value
 	 */
-	public void enQueue(k pData){
+	public void push(k pData){
 		if(_head == null){
 			_head = _tail = new Node<k>(pData);
 		}
@@ -37,19 +37,27 @@ public class Queue<k> {
 		_length++;
 	}
 	/**
-	 * <p> enQueue() <p>
-	 * Retrieves and removes the first element from the queue
-	 * @param pData: new value
+	 * <p> pop() <p>
+	 * Retrieves and removes the first element from the stack
 	 */
-	public Node<k> deQueue(){
-		if(_head == null){
-			return null; //When using the deQueue method, it should be surrounded with a try/catch statement.
-			 			 //To catch the exception if the queue is empty because it will return a null pointer exception.
+	public Node<k> pop(){
+		if(_tail == null){
+			return null; //When using the pop method, it shoudl be surrounded with a try/catch statement.
+						 //To catch the exception if the stack is empty because it will return a null pointer exception.
 		}
 		else{
-			Node<k> top = _head;
-			_head = _head.getNext();
-			_length--;
+			Node<k> top = _tail;
+			
+			if(_length == 1){
+				_head = _tail = null;
+				_length--;
+			}
+			else{
+				_tail = _tail.getPrevious();
+				_tail.setNext(null);
+				_length--;
+			}
+			
 			return top;
 			
 		}
