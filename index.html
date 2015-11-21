@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>Nota del Profe - Tecnológico de Costa Rica</title>
+	<meta name="description" content="Tecnológico de Costa Rica - Evaluación de Profesores" />
+
+
+	<link rel="stylesheet" type="text/css" href="assets/css/jquery.fullPage.css" />
+	<link rel="stylesheet" type="text/css" href="assets/css/style_profe.css" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    
+    <style>
+
+	/* Style for our header texts
+	* --------------------------------------- */
+	h1{
+		font-size: 5em;
+		font-family: arial,helvetica;
+		color: #fff;
+		margin:0;
+	}
+	.intro p{
+		color: #fff;
+	}
+
+	/* Centered texts in each section
+	* --------------------------------------- */
+	.section{
+		text-align:center;
+	}
+
+
+	/* Overwriting styles for the navigation dots (to place it where we want)
+	* --------------------------------------- */
+	.fp-slidesNav.bottom{
+		bottom: 25px;
+	}
+
+	/* Bottom menu
+	* --------------------------------------- */
+	#infoMenu li a {
+		color: #fff;
+	}
+
+	#section2 h1{
+		color: #333;
+	}
+
+	</style>
+
+	<!--[if IE]>
+		<script type="text/javascript">
+			 var console = { log: function() {} };
+		</script>
+	<![endif]-->
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.9.1/jquery-ui.min.js"></script>
+
+	<script type="text/javascript" src="assets/js/jquery.fullPage.js"></script>
+	<script type="text/javascript" src="assets/js/js_profe.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function() {
+			$('#fullpage').fullpage({
+				sectionsColor: ['#1bbc9b', '#4BBFC3', '#7BAABE'],
+				anchors: ['firstPage', 'secondPage', '3rdPage'],
+				menu: '#menu',
+				loopTop: false, //Al hacer scroll va al bottom de la pagina
+				loopBottom: false //Al hacer scroll va al top de la pagina
+			});
+		});
+	</script>
+
+</head>
+<body>
+
+
+<ul id="menu">
+	<li data-menuanchor="firstPage" class="active"><a href="#firstPage">Inicio</a></li>
+	<li data-menuanchor="secondPage"><a href="#secondPage">Servicios</a></li>
+	<li data-menuanchor="3rdPage"><a href="#3rdPage">Acerca de</a></li>
+</ul>
+
+<div id="fullpage">
+	<div class="section " id="section0">
+        <h1></h><i class="fa fa-comments"></i></h1>
+		<h1>Evaluación de Profesores</h1>
+		<p>Instituto Tecnológico de Costa Rica</p>
+        <p>Proyecto en desarrollo</p>
+		<!--<img src="imgs/fullPage.png" alt="fullPage" />-->
+	</div>
+	<div class="section" id="section1">
+		<div class="slide" id="slide1" data-anchor="slide1">
+			<div class="intro">
+                <h1></h><i class="fa fa-pencil-square-o"></i></h1>
+				<h1>Evaluación de Profesores</h1>
+				<!--<p>
+					Texto
+				</p>-->
+			</div>
+		</div>
+
+	    <div class="slide" id="slide2" data-anchor="slide2">
+            <h1></h><i class="fa fa-group"></i></h1>
+            <h1>Comentarios y experiencias de estudiantes</h1>
+		</div>
+
+		<div class="slide" id="slide3" data-anchor="slide3">
+            <h1></h><i class="fa fa-clone"></i></h1>
+			<h1>Banco de exámenes</h1>
+            
+		</div>	<div class="slide" id="slide3" data-anchor="slide3">
+			<h1></h><i class="fa fa-calendar-o"></i></h1>
+            <h1>Guía de Horario</h1>
+		</div>
+		<!--<div class="slide" id="slide3" data-anchor="slide3">
+			<h1>Slide 5</h1>
+		</div>-->
+	</div>
+	<div class="section" id="section2">
+		<div class="intro">
+			<h1>Acerca de</h1>
+            <p>notadelprofe.codigo22.com</p>
+            <br></br>
+            <p>Esta web es un proyecto de:</p>
+            <p>Fabian Solano<br>Abraham Arias</br>Lenin Torres</p>
+		</div>
+	</div>
+</div>
+
+</body>
+</html>
